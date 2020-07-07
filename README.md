@@ -1,28 +1,38 @@
-# Documentation
-How to build/run your application:
+# GUIDE
+
 Requirements:
 1. python3
-2. FlasK
+2. Microsoft ODBC driver for SQL Server  
+For Mac (https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos?view=sql-server-ver15)
+For Linx (https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15)
 
 
+Step to run from root directory:
+1. python3 -m venv venv
+2. source venv/bin/activate
+3. pip install -r requirements.txt 
+4. python3 api.py
 
+This api has swagger support, so you can go directly to http://127.0.0.1:5000/ to test the api.
+I have a remote Mssql server set up on AWS, you can use any sql server to interact with it. Etc azure data studio
 
-
-
-
-
-
-
-
-
+If you encounter any problems, please contact me at binliu321@gmail.com.
 
 
 
 Answers to the following questions:
 How did you test that your implementation was correct?
-If this application was destined for a production environment, what would you add or change?
-What compromises did you have to make as a result of the time constraints of this challenge?
 
+I tested the api with the sample input and also a variety of inputs I made on my own. I made sure the correct output (json or exception) are returned.
+
+If this application was destined for a production environment, what would you add or change?
+
+If it is a production environment, I would add CI/CD setup to this project, and maybe containerize it in docker. In addition, I would add a security layer to save the credientals. Finally, I would like to add automatic testing to this solution for production environment.
+
+What compromises did you have to make as a result of the time constraints of this challenge?
+1. For csv upload, If I had more time I would try to use the mssql bulk insert to improve the performance of the post call.
+2. If I had more time, I would like to add docker support for easier environment set up
+3. I didn't have enought time to set up the swagger api model for this project, it would be nice to have it.
 
 
 

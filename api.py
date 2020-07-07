@@ -20,33 +20,7 @@ api = Api(app = flask_app,
 		  title = "Payroll Api", 
 		  description = "Payroll api which has abaility to upload csv into db and generate reports ")
 
-# Model define
-# payPeriod = api.model('payrollReport', {
-#     'startDate': fields.String,
-#     'endDate': fields.String
-# })
-
-# employeeReport = api.model('employeeReport', {
-#     'employeeId': fields.Integer,
-#     'amountPaid': fields.Float,
-#     'payPeriods': payPeriod
-
-# })
-
-# employeeReports = api.model('employeeReports', {
-#     'employeeReport': fields.List(fields.Nested(employeeReport))
-# })
-
-# payrollReport = api.model('payrollReport',{
-#     'employeeReports' : employeeReports
-# })
-
-# result = api.model('result',{
-#     'payrollReport' : payrollReport
-# })
-
-
-
+# Request parser define
 upload_parser = reqparse.RequestParser()
 upload_parser.add_argument('csv_file',  
                          type=FileStorage, 
