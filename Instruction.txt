@@ -1,0 +1,32 @@
+
+Requirement:
+Flask,
+
+
+
+Installation
+
+python3 -m venv venv
+source venv/bin/activate
+
+
+pip install flask
+pip install flask-restplus
+pip install pypyodbc
+
+pip install 'stevedore>=1.3.0,<1.4.0' --force-reinstall
+
+Werkzeug==0.16.0
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql17 mssql-tools
+
+
+brew install unixodbc 
+
+https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos?view=sql-server-ver15
+
+
+FLASK_APP=api.py flask run

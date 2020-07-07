@@ -1,3 +1,47 @@
+# Documentation
+How to build/run your application:
+Requirements:
+1. python3
+2. FlasK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers to the following questions:
+How did you test that your implementation was correct?
+If this application was destined for a production environment, what would you add or change?
+What compromises did you have to make as a result of the time constraints of this challenge?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Wave Software Development Challenge
 
 Applicants for the Full-stack Developer role at Wave must
